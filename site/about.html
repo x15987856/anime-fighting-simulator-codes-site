@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://animefightingsimulators.com/about">
+<title>About — Anime Fightings Simulators</title>
+<style>
+  :root{
+    --ink:#14181f;
+    --ink-soft:#4a5566;
+    --line:#e3e7ee;
+    --bg:#ffffff;
+    --panel:#f7f9fc;
+    --ok:#12704a;
+    --ok-bg:#e7f5ee;
+    --warn:#8a5a00;
+    --warn-bg:#fdf3dd;
+    --stop:#a32b1c;
+    --stop-bg:#fdeceb;
+    --accent:#1f4fd8;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:32px 22px 72px}
+  h1{font-size:34px;line-height:1.2;letter-spacing:-.02em;margin:0 0 10px}
+  h2{font-size:22px;letter-spacing:-.01em;margin:44px 0 14px;padding-top:6px}
+  h3{font-size:17px;margin:26px 0 8px}
+  p{margin:0 0 14px}
+  .stamp{
+    display:inline-block;font-size:13px;color:var(--ink-soft);
+    border:1px solid var(--line);border-radius:999px;padding:5px 13px;margin-bottom:22px;
+  }
+  .lede{font-size:17px;color:var(--ink-soft);max-width:64ch}
+  .note{
+    border-left:3px solid var(--accent);background:var(--panel);
+    padding:14px 18px;border-radius:0 8px 8px 0;margin:18px 0;
+  }
+  .note p:last-child{margin-bottom:0}
+  ul.tight{margin:10px 0 14px;padding-left:20px}
+  ul.tight li{margin-bottom:7px}
+  a{color:var(--accent)}
+  .k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--panel);padding:1px 5px;border-radius:4px;font-size:.92em}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+  .card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--panel)}
+  .card h3{margin:0 0 6px}
+  .card p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+  footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-soft)}
+  .fnav{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px}
+  .fnav a{color:var(--accent);text-decoration:none;font-weight:500}
+  .fnav a:hover{text-decoration:underline}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}h1{font-size:27px}.wrap{padding:24px 14px 56px}table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:14px}th,td{padding:10px 8px}td{word-break:break-word}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>About</h1>
+  <p class="lede">Anime Fightings Simulators is maintained by an independent developer. It covers one Roblox game &mdash; Anime Fighting Simulator &mdash; across three pages: a working code list, a map and dimensions reference, and a tier list. The common thread is being straight about which parts are solid and which are not.</p>
+  <span class="stamp">An independent, unaffiliated fan site</span>
+
+  <h2>What this site is</h2>
+  <p>A reference site for a single Roblox game, in three parts: the codes that currently work, where the world's areas and dimensions sit, and how Champions rank by stat. That is the whole scope. No news, no coverage of games nobody searched for, and nothing padded out to fill space.</p>
+  <p>It is not official. Anime Fightings Simulators has no connection to Roblox Corporation and none to the studio that makes the game. Nothing here is a statement from the developers, and codes listed here are ones the developers published, not ones this site invented.</p>
+
+  <h2>How the code list gets built</h2>
+  <p>Code lists rot fast, and most of them rot silently &mdash; a page last touched three weeks ago still presents itself as current. The method here is built around that problem.</p>
+  <ul class="tight">
+    <li><strong>Tier 1 &mdash; the developer&rsquo;s own channels.</strong> The game&rsquo;s Roblox page and the official group wall. One of those on its own is enough to put a code up, because it is first-hand rather than reported by someone else. Every row names which channel it came from.</li>
+    <li><strong>Tier 2 &mdash; third-party code lists.</strong> A code from this tier goes up only when two independently maintained lists agree. One list alone is not enough. Where the two disagree, the disagreement is printed on the page rather than quietly resolved by picking a favourite.</li>
+    <li><strong>Expired codes are not cross-checked.</strong> Most appear on one list only, so there is nothing to cross-check against. Instead, every row in the expired table carries the single source that listed it, so you can tell which rows have a second opinion behind them and which do not.</li>
+    <li>When no source has an answer &mdash; a level gate, an expiry timestamp, an error string &mdash; the page says so. It does not get filled with a plausible guess.</li>
+    <li>Claims that are reasoned rather than sourced are labelled as inference, with the reasoning shown.</li>
+  </ul>
+
+  <div class="note">
+    <p>The practical consequence: this page is sometimes shorter than the competition. A competitor listing thirty-seven working codes is usually listing years of dead ones. Five verified codes beat thirty-seven unverified ones.</p>
+  </div>
+
+  <h2>What you will find here</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Codes with conditions</h3>
+      <p>Each code carries what is known about when it works &mdash; the version it shipped with, whether a gate exists, what happens on a second attempt.</p>
+    </div>
+    <div class="card">
+      <h3>Redemption steps</h3>
+      <p>The actual in-game path, using the real interface labels, so it does not go stale when the layout shifts.</p>
+    </div>
+    <div class="card">
+      <h3>Honest unknowns</h3>
+      <p>Gaps are marked on the page rather than papered over. You should be able to tell what is confirmed and what is not.</p>
+    </div>
+    <div class="card">
+      <h3>Corrections</h3>
+      <p>Spot a dead code or a wrong number? Say so and it gets fixed. See the <a href="/contact">contact page</a>.</p>
+    </div>
+  </div>
+
+  <h2>How the site pays for itself</h2>
+  <p>Advertising. Third-party vendors serve the ads on these pages and set cookies to do it. That arrangement is described in full in the <a href="/privacy">privacy policy</a>. It does not affect which codes appear on a page or in what order.</p>
+
+  <footer>
+    <p>Anime Fightings Simulators is maintained by an independent developer. Not affiliated with Roblox Corporation or the game's developers.</p>
+    <nav class="fnav">
+      <a href="/">Codes</a>
+      <a href="/map">Map</a>
+      <a href="/tier-list">Tier List</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </footer>
+
+</div>
+</body>
+</html>

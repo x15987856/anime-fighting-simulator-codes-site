@@ -1,0 +1,58 @@
+name: AFS codes patrol
+
+# Every 6 hours at 00:17 / 06:17 / 12:17 / 18:17 UTC.
+# GitHub queues cron jobs rather than firing them to the second, so expect a few
+# minutes of drift at busy times.
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: afs-patrol
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  patrol:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Pass 1: read every source, diff against the table, apply the tier gates,
+      # edit the page if something really changed, append the log row.
+      # It does not deploy - that is the step below.
+      - name: Patrol (fetch, diff, tier, edit, log)
+        run: python patrol.py --no-deploy
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: e6edaf8361367fcb1e8e662069986552
+          command: pages deploy site --project-name anime-fighting-codes --branch main
+
+      # Pass 2: only now can the live URLs be tested, so the results are real.
+      - name: Verify live
+        run: python patrol.py --verify-only
+
+      - name: Commit only if the page actually changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- site/; then
+            echo "No change on the page -> log row discarded, nothing committed."
+            git checkout -- MAINTENANCE.md 2>/dev/null || true
+          else
+            git add site/ MAINTENANCE.md
+            git commit -m "patrol: $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

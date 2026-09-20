@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://animefightingsimulators.com/map">
+<title>Anime Fighting Simulator Map — Dimensions, Training Areas &amp; How to Find Your Way</title>
+<meta name="description" content="Which map you load into in Anime Fighting Simulator, how to orient yourself when no map screen is documented, and the training-area ladder that tells you where you are. Checked against Update 9.">
+<style>
+  :root{
+    --ink:#14181f;
+    --ink-soft:#4a5566;
+    --line:#e3e7ee;
+    --bg:#ffffff;
+    --panel:#f7f9fc;
+    --ok:#12704a;
+    --ok-bg:#e7f5ee;
+    --warn:#8a5a00;
+    --warn-bg:#fdf3dd;
+    --stop:#a32b1c;
+    --stop-bg:#fdeceb;
+    --accent:#1f4fd8;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:32px 22px 72px}
+  h1{font-size:34px;line-height:1.2;letter-spacing:-.02em;margin:0 0 10px}
+  h2{font-size:22px;letter-spacing:-.01em;margin:44px 0 14px;padding-top:6px}
+  h3{font-size:17px;margin:26px 0 8px}
+  p{margin:0 0 14px}
+  .crumb{font-size:13.5px;color:var(--ink-soft);margin:0 0 18px}
+  .crumb a{color:var(--accent);text-decoration:none}
+  .crumb a:hover{text-decoration:underline}
+  .stamp{
+    display:inline-block;font-size:13px;color:var(--ink-soft);
+    border:1px solid var(--line);border-radius:999px;padding:5px 13px;margin-bottom:22px;
+  }
+  .lede{font-size:17px;color:var(--ink-soft);max-width:64ch}
+  table{width:100%;border-collapse:collapse;margin:18px 0 8px;font-size:15px}
+  th,td{text-align:left;vertical-align:top;padding:12px 12px;border-bottom:1px solid var(--line)}
+  th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);background:var(--panel)}
+  td.cond{color:var(--ink-soft);font-size:14px}
+  .note{
+    border-left:3px solid var(--accent);background:var(--panel);
+    padding:14px 18px;border-radius:0 8px 8px 0;margin:18px 0;
+  }
+  .note.warn{border-color:var(--warn)}
+  .note.stop{border-color:var(--stop)}
+  .note p:last-child{margin-bottom:0}
+  .flag{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--stop);display:block;margin-bottom:6px}
+  ul.tight{margin:10px 0 14px;padding-left:20px}
+  ul.tight li{margin-bottom:7px}
+  .k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--panel);padding:1px 5px;border-radius:4px;font-size:.92em}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}h1{font-size:27px}.wrap{padding:24px 14px 56px}table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:14px}th,td{padding:10px 8px}td{word-break:break-word}}
+  .card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--panel)}
+  .card h3{margin:0 0 6px}
+  .card p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+  footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-soft)}
+  .unk{color:var(--stop);font-weight:600}
+  a{color:var(--accent)}
+  .fnav{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px}
+  .fnav a{color:var(--accent);text-decoration:none;font-weight:500}
+  .fnav a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="crumb"><a href="/">Anime Fightings Simulators</a> &rsaquo; Map</p>
+
+  <h1>Anime Fighting Simulator Map</h1>
+  <p class="lede">There is no single picture to open. The world is one overworld of training areas, with dimensions sitting behind portals on top of it, and every spawn drops you into Dimension 1. Below: how to tell where you are, and the parts no source has written down.</p>
+  <span class="stamp">Checked 15 September 2026 · Current build: Update 9 (Skill Tree)</span>
+
+  <h2>The short answer</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Where the map is</h3>
+      <p>One overworld carries the training areas. Dimensions are separate spaces you enter through portals. You load into Dimension 1.</p>
+    </div>
+    <div class="card">
+      <h3>How you view it</h3>
+      <p><span class="unk">No page documents a map or minimap screen</span> in this build. You find your way by landmark and by the training-area ladder.</p>
+    </div>
+    <div class="card">
+      <h3>Which version this is</h3>
+      <p>Update 9 &mdash; the build that shipped the code <span class="k">UPDATE9</span>. The fan wiki's own update log still stops at Update 5, so area lists elsewhere lag.</p>
+    </div>
+    <div class="card">
+      <h3>What is missing everywhere</h3>
+      <p>Nothing we could read maps areas to dimensions, publishes coordinates, or says how many dimensions the current build has.</p>
+    </div>
+  </div>
+
+  <h2>Four different games answer to this name</h2>
+  <p>Search for this keyword and you get pages about at least four separate Roblox experiences mixed together. Their maps are not the same map. Sorting out which one you are playing is most of the battle.</p>
+
+  <table>
+    <thead>
+      <tr><th>Game</th><th>What it is</th><th>Map documentation</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Anime Fighting Simulator (2026)</strong></td>
+        <td class="cond">The remaster by BlockZone, Roblox place 100429474155186. This is the game this page describes.</td>
+        <td class="cond">Training areas are documented as a ladder. There is no map page, no dimensions page, and no minimap page.</td>
+      </tr>
+      <tr>
+        <td>Anime Fighting Simulator (2019)</td>
+        <td class="cond">The original that the 2026 version remakes.</td>
+        <td class="cond">Its wiki documents six dimensions, with portal locations and crate counts. Those numbers describe the older game.</td>
+      </tr>
+      <tr>
+        <td>Anime Fighting Simulator: Endless</td>
+        <td class="cond">A separate game in the same franchise.</td>
+        <td class="cond">Its own wiki, its own island list, its own crate routes. Areas do not carry over.</td>
+      </tr>
+      <tr>
+        <td>Anime Fighting Simulator X</td>
+        <td class="cond">Another separate title.</td>
+        <td class="cond">The only one of the four with a documented in-game minimap. We found none for the other three.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note warn">
+    <span class="flag">Why this trips people up</span>
+    <p>A minimap <em>does</em> exist somewhere in this franchise &mdash; just not in the game you are probably playing. It belongs to the title called X. If you followed a guide that told you to click an ellipsis icon and pick a map icon, that instruction is for a different game.</p>
+  </div>
+
+  <h2>The training-area ladder is how you locate yourself</h2>
+  <p>With no map screen to open, the practical way to read the world is the ladder. Each stat has its own chain of areas, and each area has a power requirement you must meet before it will train you. Whichever rung you currently qualify for tells you roughly where in the world you belong &mdash; and it is the same information the game gates your progress on.</p>
+
+  <table>
+    <thead>
+      <tr><th>Stat</th><th>Areas</th><th>First rung</th><th>Middle rungs</th><th>Last rung</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Strength</strong></td>
+        <td>21</td>
+        <td>Dummy &mdash; 100</td>
+        <td class="cond">Meteor &mdash; 1M · Excalibur &mdash; 1B · Double Dungeon &mdash; 100QD · Forest of Death &mdash; 1SX</td>
+        <td>Tournament of Power &mdash; 99OC</td>
+      </tr>
+      <tr>
+        <td><strong>Durability</strong></td>
+        <td>21</td>
+        <td>Hot Spring &mdash; 100</td>
+        <td class="cond">Paw &mdash; 1M · Planet &mdash; 1B · Subway Dungeon &mdash; 100QD · Crater &mdash; 1SX</td>
+        <td>Gravito Rock Zone &mdash; 99OC</td>
+      </tr>
+      <tr>
+        <td><strong>Chakra</strong></td>
+        <td>21</td>
+        <td>Chakra Tree &mdash; 100</td>
+        <td class="cond">Temple &mdash; 1M · Tower of Heaven &mdash; 100B · Las Noches &mdash; 100QN · God Tree &mdash; 1SX</td>
+        <td>Infinity Castle &mdash; 99OC</td>
+      </tr>
+      <tr>
+        <td><strong>Speed</strong></td>
+        <td>3</td>
+        <td>Treadmill &mdash; 100</td>
+        <td class="cond">Motorless Treadmill &mdash; 10K</td>
+        <td>Acceleraise Zone &mdash; 100K</td>
+      </tr>
+      <tr>
+        <td><strong>Agility</strong></td>
+        <td>2</td>
+        <td>Trampoline &mdash; 100</td>
+        <td class="cond">&mdash;</td>
+        <td>Gravity Chamber &mdash; 10K</td>
+      </tr>
+      <tr>
+        <td><strong>Sword</strong></td>
+        <td>0</td>
+        <td colspan="3" class="cond">None. The wiki notes Sword is the only stat with no training areas as of Update 5.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>That is 68 documented areas across five stats. Speed and Agility stop early &mdash; three and two rungs &mdash; so once you are past 100K in either, there is nowhere further to stand and the other three stats become your only progression path.</p>
+
+  <div class="note">
+    <p><strong>The gate, and the one number that looks wrong.</strong> An area will not train you until the matching stat meets its requirement, so standing on a higher rung and getting nothing means you are short, not that the area is broken. Two multipliers on the wiki look mistyped: Motorless Treadmill and Gravity Chamber are both listed as <span class="k">x15K</span> while every comparable rung on the other ladders reads x15. We left the rest as published and are flagging these two rather than quietly correcting them.</p>
+  </div>
+
+  <h2>Dimensions</h2>
+  <p>Dimensions are the second layer of the world. Each one carries exactly one Dimension Boss, and that boss is the cleanest way to identify which dimension you have walked into.</p>
+
+  <ul class="tight">
+    <li><strong>Dimension 1 &mdash; Kurama.</strong> This is where you spawn. Kurama drops 50 Chikara at Tier 1, rising by 20 per tier to Tier 5, and its base HP at Tier 1 is 1.25K.</li>
+    <li><strong>Dimension 2 &mdash; Broly.</strong> Three phases, each one healing him to full when the previous ends. He drops 75 Tensei Shards at Tier 1, rising by 30 per tier.</li>
+  </ul>
+
+  <p>Boss fights run on a two-minute clock. Miss it and everyone in the arena is teleported back to spawn with nothing, no matter how much damage landed. Bosses carry a Tier from 1 to 5 that climbs on each win and drops on each loss, and tiers are shared across the whole server rather than tracked per player.</p>
+
+  <div class="note stop">
+    <span class="flag">Honest gap — dimension count</span>
+    <p>No page we could read states how many dimensions the current build has. The 2019 original's wiki describes portals to "the other 5 dimensions," which implies six &mdash; but that page is about the older game, and we are not treating it as an answer for this one. How many exist in Update 9 is <span class="unk">unknown</span>.</p>
+  </div>
+
+  <h2>What nobody has written down</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>No map screen, documented</h3>
+      <p>No page we could read documents a map, world map, or minimap screen for Update 9. That is not the same as proof that none exists &mdash; it means nobody has written one down.</p>
+    </div>
+    <div class="card">
+      <h3>Areas are not mapped to dimensions</h3>
+      <p>The current wiki lists all 68 areas as one flat ladder per stat. Which dimension each area physically sits in is <span class="unk">unwritten</span>.</p>
+    </div>
+    <div class="card">
+      <h3>No coordinates</h3>
+      <p>Nothing publishes grid references, coordinate pairs, or measured distances. Every location description on every page is prose and landmarks only.</p>
+    </div>
+    <div class="card">
+      <h3>Portals, in the current build</h3>
+      <p>Portal locations are documented for the 2019 original &mdash; above the lake, across from Monster. For Update 9, no page we could read says where the portals stand.</p>
+    </div>
+  </div>
+
+  <p>Where a claim on this page could not be confirmed, it is marked unknown rather than filled in. Area names, requirements, and boss figures were read from the fan-maintained wiki covering the 2026 remaster; the version note comes from the live code list on this site.</p>
+
+  <p><strong>Deciding which Champions to run while you grind?</strong> See the <a href="/tier-list">Anime Fighting Simulator tier list</a> &mdash; ranked on max-level stat bonus, with the tier cut-offs stated and the Update 9 position left unconfirmed.</p>
+
+  <footer>
+    <p>Anime Fightings Simulators is maintained by an independent developer. Not affiliated with Roblox Corporation or the game's developers.</p>
+    <nav class="fnav">
+      <a href="/">Codes</a>
+      <a href="/map">Map</a>
+      <a href="/tier-list">Tier List</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </footer>
+
+</div>
+</body>
+</html>

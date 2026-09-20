@@ -1,0 +1,9 @@
+# This repo is public and it is a working directory too, so publish an allowlist
+# rather than trying to name every scratch file.
+/*
+!/.github/
+!/site/
+!/patrol.py
+!/MAINTENANCE.md
+!/README.md
+!/.gitignore

@@ -13,3 +13,4 @@ Patrol reads these sources every round:
 | Date (UTC+8) | Added | Moved | In table | Tier 1 | Tier 2 | Deployed | / | /about | Conclusion |
 |---|---|---|---|---|---|---|---|---|---|
 | 2026-09-20 13:13 | 0 | 0 | 5 | 1 | 4 | n/a | 200/0 | 200/0 | no change |
+| 2026-09-21 00:11 | 0 | 0 | 5 | 1 | 4 | skipped: no token | 200/0 | 200/0 | flagged UPDATE9, 400KMEMBERS as single-list |
